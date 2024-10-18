@@ -45,3 +45,37 @@ p {
     font-size: 18px;
     margin: 10px 0;
 }
+
+/* Style for nested lists */
+ul, ol {
+    padding-left: 20px;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+li {
+    margin: 5px 0;
+}
+ul.dots{
+    list-style-type: circle;
+}
+
+h1.lists{
+    padding: 20px;
+    background-color: lightblue;
+    color: white;
+}
+
+/* Style for tables */
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid;
+}
