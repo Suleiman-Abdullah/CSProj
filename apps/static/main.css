@@ -1,0 +1,47 @@
+/* Style for links */
+.custom-link {
+    padding: 10px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.link-1{
+    color: red;
+    background-color: lightgreen;
+}
+
+.link-2{
+    color: yellow;
+    background-color: lightgray;
+}
+
+.link-3{
+    color: white;
+    background-color: black;
+}
+
+.custom-link:visited {
+    color: purple;
+}
+
+.custom-link:hover {
+    background-color: lightblue;
+}
+
+.custom-link:active {
+    color: red;
+}
+
+/* tags */
+h1 {
+    font-size: 30px;
+    color: green;
+    background-color: lightgreen;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
