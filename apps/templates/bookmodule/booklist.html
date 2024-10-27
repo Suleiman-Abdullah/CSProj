@@ -3,6 +3,14 @@
 {% block title %} Search Result {% endblock title %}
 
 {% block content %}
-{{books}}
+<h1>Book List</h1>
 
+    {% if books %}
+        {% for book in books %}
+            ID: {{book.id}}, Title: {{book.title}}
+            <hr>
+        {% endfor %}
+    {% else %}
+        <p>No books found.</p>
+    {% endif %}
 {% endblock content %}
