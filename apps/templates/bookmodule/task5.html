@@ -1,0 +1,14 @@
+{% extends "bookmodule/layouts/base.html" %}
+{% load static %}
+{% block title %} Search Result {% endblock title %}
+
+{% block content %}
+    <h1>Task5, Books information.</h1>
+
+    <p>Number of Books: {{books.count}}</p>
+    <p>Total Price: {{books.TPrice}}</p>
+    <p>Avg Price: {{books.APrice}}</p>
+    <p>Maximum Price: {{books.MaPrice}}</p>
+    <p>Minimum  Price: {{books.MiPrice}}</p>
+
+{% endblock content %}

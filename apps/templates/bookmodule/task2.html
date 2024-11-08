@@ -1,0 +1,16 @@
+{% extends "bookmodule/layouts/base.html" %}
+{% load static %}
+{% block title %} Search Result {% endblock title %}
+
+{% block content %}
+    <h1>Books with edition greater than 2 and the title/author contains "qu".</h1>
+    {% if books %}
+        {% for book in books %}
+            ID: {{book.id}}, Edition: {{book.edition}} ,Title: {{book.title}}, Author: {{book.author}}
+            <hr>
+        {% endfor %}
+    {% else %}
+        <p>No books found.</p>
+    {% endif %}
+
+{% endblock content %}
