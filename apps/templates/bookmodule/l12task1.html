@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1</title>
+</head>
+<body>
+    <h1>Task 1: Change Div Properties</h1>
+    <button onclick="changeBackground()">Change Background</button>
+    <button onclick="changeText()">Change Text</button>
+    <div id="iDiv" style="width: 200px; height: 100px; background-color: lightgray;">Base Text</div>
+
+    <script>
+        function changeBackground() {
+            document.getElementById('iDiv').style.backgroundColor = 'lightgreen';
+        }
+
+        function changeText() {
+            document.getElementById('iDiv').innerText = 'New Text';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Gallery</title>
+</head>
+<body>
+    <h1>Photo Gallery</h1>
+    <a href="{% url 'books.addBookWithCover' %}">Upload</a>
+    <ul>
+        {% for book in books %}
+        <li>
+            <h3>{{ book.title }}</h3>
+            <img src="{{ book.coverPage.url }}" alt="{{ book.title }}" width="200">
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

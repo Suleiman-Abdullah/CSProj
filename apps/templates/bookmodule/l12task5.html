@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5</title>
+</head>
+<body>
+    <h1>Task 5: Create Table</h1>
+    <button onclick="createTable()">Create Table</button>
+    <div id="tableContainer"></div>
+
+    <script>
+        function createTable() {
+            const container = document.getElementById('tableContainer');
+            const table = document.createElement('table');
+            table.border = '1';
+
+            const row1 = table.insertRow();
+            row1.insertCell().textContent = 'first name';
+            row1.insertCell().textContent = 'second name';
+            row1.insertCell().textContent = 'age';
+
+            const row2 = table.insertRow();
+            row2.insertCell().textContent = 'ahmad';
+            row2.insertCell().textContent = 'khaled';
+            row2.insertCell().textContent = '19';
+
+            const row3 = table.insertRow();
+            row3.insertCell().textContent = 'omar';
+            row3.insertCell().textContent = 'hamad';
+            row3.insertCell().textContent = '23';
+
+            const row4 = table.insertRow();
+            row4.insertCell().textContent = 'sulaiman';
+            row4.insertCell().textContent = 'abdullah';
+            row4.insertCell().textContent = '21';
+
+            const row5 = table.insertRow();
+            row5.insertCell().textContent = 'faisal';
+            row5.insertCell().textContent = 'fares';
+            row5.insertCell().textContent = '20';
+
+            container.appendChild(table);
+
+        }
+    </script>
+</body>
+</html>

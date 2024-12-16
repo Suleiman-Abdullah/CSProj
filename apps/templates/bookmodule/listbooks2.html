@@ -1,0 +1,26 @@
+{% extends "bookmodule/layouts/base.html" %}
+{% load static %}
+{% block title %} book list {% endblock title %}
+
+{% block content %}
+
+    <h1>Books List</h1>
+    <a href="{% url 'add_book' %}">Add New Book</a>
+    <ul>
+        {% for book in books %}
+        <li>
+            {{ book.title }}
+            <a href="{% url 'edit_book' book.id %}">Edit</a>
+            <a href="{% url 'delete_book' book.id %}">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% if form %}
+    <h2>{% if book %}Edit Book{% else %}Add New Book{% endif %}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">{{ button_text }}</button>
+    </form>
+{% endif %}
+{% endblock content %}

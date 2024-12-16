@@ -1,0 +1,17 @@
+{% extends "bookmodule/layouts/base.html" %}
+{% load static %}
+{% block title %} Update a book {% endblock title %}
+
+{% block content %}
+
+    <h1>Edit Book</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="title" value="{{ book.title }}" required>
+        <input type="text" name="author" value="{{ book.author }}" required>
+        <input type="number" name="price" value="{{ book.price }}" required>
+        <input type="number" name="edition" value="{{ book.edition }}" required>
+        <button type="submit">Update Book</button>
+    </form>
+
+{% endblock content %}

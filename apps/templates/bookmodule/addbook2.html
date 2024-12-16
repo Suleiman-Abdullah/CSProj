@@ -1,0 +1,15 @@
+{% extends "bookmodule/layouts/base.html" %}
+{% load static %}
+{% block title %} add new book {% endblock title %}
+
+{% block content %}
+
+    <h1>Add New Book</h1>
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Book</button>
+    </form>
+
+{% endblock content %}

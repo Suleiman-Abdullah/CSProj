@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student List</title>
+</head>
+<body>
+    <h1>Students (Many-to-Many)</h1>
+    <a href="{% url 'add_student2' %}">Add Student</a>
+    <ul>
+        {% for student in students %}
+        <li>
+            {{ student.name }} (Age: {{ student.age }}) - Addresses:
+            <ul>
+                {% for address in student.addresses.all %}
+                <li>{{ address }}</li>
+                {% endfor %}
+            </ul>
+            <a href="{% url 'update_student2' student.id %}">Edit</a>
+            <a href="{% url 'delete_student2' student.id %}">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

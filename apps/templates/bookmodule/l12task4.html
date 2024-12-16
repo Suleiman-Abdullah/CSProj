@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Hover</title>
+    <style>
+        #iDiv {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            text-align: center;
+            fontSize = '16px';
+        }
+    </style>
+</head>
+<body>
+    <h1>Change Style on Hover</h1>
+    <div id="iDiv">Hover Here</div>
+
+    <script>
+        const liDiv = document.getElementById('iDiv');
+
+        liDiv.onmouseover = function() {
+            liDiv.style.backgroundColor = 'lightgreen';
+            liDiv.style.fontSize = '20px';
+        };
+
+        liDiv.onmouseout = function() {
+            liDiv.style.backgroundColor = 'lightgray';
+            liDiv.style.fontSize = '16px';
+        };
+    </script>
+</body>
+</html>

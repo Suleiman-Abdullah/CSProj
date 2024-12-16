@@ -16,10 +16,21 @@ class Address(models.Model):
         return self.city
 
 
-class Students(models.Model):
+class Student(models.Model):
     name = models.CharField(max_length=50)
     age = models.SmallIntegerField()
     address = models.ForeignKey(Address, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
+
+
+class Student2(models.Model):
+    name = models.CharField(max_length=50)
+    age = models.IntegerField()
+    addresses = models.ManyToManyField(Address)
+
+
+class BookCover(models.Model):
+    title = models.CharField(max_length=50)
+    coverPage = models.ImageField(upload_to='documents/')
